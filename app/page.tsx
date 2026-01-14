@@ -18,7 +18,7 @@ export default function Portfolio() {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const roles = useMemo(() => ["Frontend Developer", "Programmer", "Student"], []);
+  const roles = useMemo(() => ["I am a Student.", "I build fast, beautiful websites.", "I turn ideas into reality."], []);
 
   useEffect(() => {
     const handleType = () => {
@@ -119,12 +119,13 @@ export default function Portfolio() {
               </motion.h1>
 
               <motion.h2
-                className="hero-role"
+                className="hero-role min-h-[3.5rem]"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                I build fast, beautiful websites that help businesses grow.
+                {text}
+                <span className="text-brand-blue animate-pulse">|</span>
               </motion.h2>
 
               <motion.p
